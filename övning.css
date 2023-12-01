@@ -1,0 +1,40 @@
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.discount {
+    position: absolute;
+    background: black;
+    color: white;
+    top: 20px;
+    right: 0;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.cart-button-container {
+    background: rgba(228, 228, 228, 0.658);
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart {
+    width: 115px;
+    height: 40px;
+    border: 2px solid black;
+    font-size: 14px;
+    font-weight: bold;
+}

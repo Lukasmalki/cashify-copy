@@ -1,0 +1,356 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-container {
+    display: none;
+    flex-direction: row;
+    background: rgb(29, 29, 29);
+    width: 640px;
+    height: 525px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.menu-leftsection {
+    width: 150px;
+    height: 100%;
+    background: #161616;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.menu-rightsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.daily-sales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.daily-sales p {
+    color: rgb(216, 216, 216);
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.daily-sales p.amount {
+    font-size: 27px;
+}
+
+.daily-sales p.close-menu {
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.menu-buttons-container button {
+    padding-left: 10px;
+    width: 130px;
+    height: 38px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(173, 173, 173);
+    background: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.menu-buttons-container button:hover {
+    background-color: rgba(65, 65, 65, 0.356);
+}
+
+.menu-buttons-row1 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(46, 45, 45);
+}
+
+.menu-buttons-row2 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(46, 45, 45);
+}
+
+.googleplay-container {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 20px;
+}
+
+.googleplay-container img {
+    height: 13px;
+    margin-right: 5px;
+}
+
+.googleplay-button {
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(70, 70, 70);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.dagsavslut-button {
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgb(57, 84, 170);
+    color: #f1f1f1;
+    margin-left: 90px;
+    cursor: pointer;
+}
+
+.googleplay-container p {
+    color: rgb(170, 170, 170);
+    font-size: 14px;
+}
+
+.x-rapport-container {
+    height: 390px;
+    width: 270px;
+    background: white;
+    position: absolute;
+    top: 120px;
+    left: 390px;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translate(-5%, -5%);
+    transition: transform 0.3s;
+}
+
+.x-rapport-container.visible {
+    visibility: visible;
+    transform: translate(0%, 0%);
+}
+
+.x-rapport-container p {
+    font-size: 30px;
+    margin-top: 15px;
+    color: #444;
+}
+
+.x-rapport-container button {
+    width: 210px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.skrivut-button {
+    background: rgb(18, 151, 40);
+    color: white;
+    margin-top: 20px;
+}
+
+.maila-button {
+    background: rgb(51, 94, 235);
+    color: white;
+    margin-top: 20px;
+}
+
+.visapåskärm-button {
+    background: rgb(221, 221, 221);
+    color: #444;
+    margin-top: 20px;
+}
+
+.avbryt-xrapport-button {
+    margin-top: 50px;
+    background: #444;
+    color: white;
+}
+
+.z-rapport-container {
+    background: white;
+    height: 135px;
+    width: 310px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 250px;
+    left: 370px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translate(5%, -5%);
+    transition: transform 0.3s;
+}
+
+.z-rapport-container.visible {
+    visibility: visible;
+    transform: translate(0%, 0%);
+}
+
+.z-rapport-container p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.z-rapport-container button {
+    width: 110px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 6px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.avbryt-zrapport-button {
+    background: #444;
+}
+
+.ok-button {
+    background: rgb(18, 151, 40);
+}
+
+.vänligen-vänta-container {
+    background: white;
+    height: 90px;
+    width: 260px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 275px;
+    left: 395px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.vänligen-vänta-container.visible {
+    visibility: visible;
+}
+
+.vänligen-vänta-container p {
+    font-size: 24px;
+    color: #444;
+}
+
+.zrapport-created-container {
+    background: white;
+    height: 90px;
+    width: 260px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 275px;
+    left: 395px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.zrapport-created-container.visible {
+    visibility: visible;
+}
+
+.zrapport-created-container p {
+    font-size: 24px;
+    color: #3b9e14;
+}
+
+.mail-xrapport-container {
+    background: white;
+    height: 240px;
+    width: 340px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 200px;
+    left: 355px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.mail-xrapport-container.visible {
+    visibility: visible;
+}
+
+.mail-xrapport-container p {
+    font-size: 30px;
+    color: #444;
+    margin: 0;
+}
+
+.mail-xrapport-container input {
+    height: 35px;
+    width: 260px;
+    border: 2px solid #444;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.mail-xrapport-container button {
+    width: 130px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 6px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.avbryt-mail-button {
+    background: #444;
+    color: white;
+}
+
+.mail-xrapport-button {
+    background: rgb(51, 94, 235);
+    color: white;
+}

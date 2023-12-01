@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashify kassa</title>
+    <link rel="stylesheet" href="cashify-login.css">
+    <link rel="stylesheet" href="cashify-articles.css">
+    <link rel="stylesheet" href="cashify-payment.css">
+    <link rel="stylesheet" href="cashify-bottom.css">
+    <link rel="stylesheet" href="cashify-menu.css">
+    <link rel="stylesheet" href="cashify-functions.css">
+</head>
+<body>
+
+    <div class="padda">
+        <div class="camera"></div>
+
+        <div class="x-rapport-container">
+            <p>X-rapport</p>
+            <button class="skrivut-button">Skriv ut</button>
+            <button class="maila-button">Maila</button>
+            <button class="visapåskärm-button">Visa på skärm</button>
+            <button class="avbryt-xrapport-button">Avbryt</button>
+        </div>
+
+        <div class="mail-xrapport-container">
+            <p>Maila X-rapport</p>
+            <input type="text" placeholder="Epost">
+            <div>
+                <button class="avbryt-mail-button">Avbryt</button>
+                <button class="mail-xrapport-button">Maila</button>
+            </div>
+        </div>
+
+        <div class="z-rapport-container">
+            <p>Skapa Z-rapport?</p>
+            <div>
+                <button class="avbryt-zrapport-button">Avbryt</button>
+                <button class="ok-button">OK</button>
+            </div>
+        </div>
+
+        <div class="vänligen-vänta-container">
+            <p>Vänligen vänta...</p>
+        </div>
+
+        <div class="zrapport-created-container">
+            <p>Z-rapport skapad.</p>
+        </div>
+
+        <div class="parkreceipt-popup">
+            <p>Parkera kvitto</p>
+            <input type="text" placeholder="Kommentar">
+            <div>
+                <button class="avbryt-parkreceipt-button">Avbryt</button>
+                <button class="confirm-parkreceipt-button">Parkera</button>
+            </div>
+        </div>
+        
+
+        <div class="cashify">
+
+            <div class="uppe">
+
+
+                <!--Inga artiklar att parkera popup-->
+                <div class="no-articles-found-popup">
+                    <div>
+                        <p>Inga artiklar att parkera</p>
+                    </div>
+                    <div>
+                        <button class="no-articles-ok">OK</button>
+                    </div>
+                </div>
+
+                <!--Hämta kvitto knapp-->
+                <div class="getreceipt-container">
+                    <div class="getreceipt-title-container">
+                        <p class="close-menu">X</p>
+                        <p class="getreceipt-title">Hämta kvitto</p>
+                    </div>
+                    <div class="parked-receipts-container">
+                        <div class="parked-receipts-row1">
+                            <div class="parked-receipt1">
+                                <p class="p-comment1">Kvitto #</p>
+                                <p class="p-articlename1-1"></p>
+                                <p class="p-articlename1-2"></p>
+                                <p class="p-articlename1-3"></p>
+                                <p class="p-price1">100 kr</p>
+                            </div>
+                            <div class="parked-receipt">
+                                <p class="p-comment">hej</p>
+                                <p class="p-articlename2-1"></p>
+                                <p class="p-articlename2-2"></p>
+                                <p class="p-articlename2-3"></p>
+                                <p class="p-price">hej</p>
+                            </div>
+                            <div class="parked-receipt">
+                                <p class="p-comment">hej</p>
+                                <p class="p-articlename3-1"></p>
+                                <p class="p-articlename3-2"></p>
+                                <p class="p-articlename3-3"></p>
+                                <p class="p-price">hej</p>
+                            </div>
+                        </div>
+                        <div class="parked-receipts-row2">
+                            <div class="parked-receipt">
+                                <p class="p-comment">hej</p>
+                                <p class="p-articlename4-1"></p>
+                                <p class="p-articlename4-2"></p>
+                                <p class="p-articlename4-3"></p>
+                                <p class="p-price">hej</p>
+                            </div>
+                            <div class="parked-receipt">
+                                <p class="p-comment">hej</p>
+                                <p class="p-articlename5-1"></p>
+                                <p class="p-articlename5-2"></p>
+                                <p class="p-articlename5-3"></p>
+                                <p class="p-price">hej</p>
+                            </div>
+                            <div class="parked-receipt">
+                                <p class="p-comment">hej</p>
+                                <p class="p-articlename6-1"></p>
+                                <p class="p-articlename6-2"></p>
+                                <p class="p-articlename6-3"></p>
+                                <p class="p-price">hej</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--funktionsknapp-->
+                <div class="functions-container">
+                    <div class="functions-title-container">
+                        <p class="close-menu">X</p>
+                        <p class="functions-title">Funktioner</p>
+                    </div>        
+                    <div class="functions-buttons-row1">
+                        <button class="park-receipt">Parkera kvitto</button>
+                        <button class="get-receipt">Hämta kvitto</button>
+                    </div>
+                    <div class="functions-buttons-row2">
+                        <button>Växel In</button>
+                        <button>Växel Ut</button>
+                    </div>
+                    <div class="functions-buttons-row3">
+                        <button>Artikel rabatt %</button>
+                        <button>Nota rabatt %</button>
+                    </div>
+                    <div class="functions-buttons-row4">
+                        <button>Kvittokopia</button>
+                        <button>Retur</button>
+                    </div>
+                    <div class="functions-buttons-row5">
+                        <button>Visa nummersats</button>
+                        <button>Registrera kortköp</button>
+                    </div>
+                </div>
+
+                <!--menyknapp-->
+                <div class="menu-container">
+                    <div class="menu-leftsection">
+                        <div class="menu-buttons-container">
+                            <div class="menu-buttons-row1">
+                                <button class="x-rapport-button">X-rapport</button>
+                                <button>Kvitton</button>
+                            </div>
+                            <div class="menu-buttons-row2">
+                                <button>Personalliggare</button>
+                                <button>Journalminne</button>
+                            </div>
+                            <div class="menu-buttons-row3">
+                                <button>Synkronisera</button>
+                                <button>Om kassan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-rightsection">
+                        <div class="daily-sales">
+                            <div>
+                                <p class="amount">0 kr</p>
+                                <p>Dagens försäljning</p>
+                            </div>
+                            <div>
+                                <p class="amount">0 kr</p>
+                                <p>Returer</p>
+                            </div>
+                            <div>
+                                <p class="amount">0</p>
+                                <p>Antal köp</p>
+                            </div>
+                        </div>
+                        <div class="googleplay-container">
+                            <p>Version: 1.35</p>
+                            <button class="googleplay-button"><img src="googleplay-logo.png" alt="Play Butik">Google Play</button>
+                            <button class="dagsavslut-button">Dagsavslut</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="article-container">
+                    <div class="groups">
+                        <button class="start" onclick="toggleActive(this)">
+                            Start
+                        </button>
+                        <button class="mat" onclick="toggleActive(this)">
+                            Mat
+                        </button>
+                        <button class="dryck" onclick="toggleActive(this)">
+                            Dryck
+                        </button>
+                    </div>
+
+                    <div class="article-row1">
+                        <button data-article-name="Bussola pizza"><div class="foodicons"><img src="pizza-pic.png" alt=""></div>Bussola pizza</button>
+                        
+                        <button data-article-name="Capricciosa"><div class="foodicons2"><img src="pizza-pic.png" alt=""></div>Capricciosa</button>
+                        
+                        <button data-article-name="Kebab pizza"><div class="foodicons3"><img src="pizza-pic.png" alt=""></div>Kebab pizza</button>
+                        
+                        <button data-article-name="Kyckling pizza"><div class="foodicons4"><img src="pizza-pic.png" alt=""></div>Kyckling pizza</button>
+                        
+                    </div>
+                    <div class="article-row2">
+                        <button data-article-name="Halloumi"><div class="foodicons"><img src="veg-pic.png" alt=""></div>Halloumi</button>
+                        
+                        <button data-article-name="Vegoburgare"><div class="foodicons2"><img src="veg-pic.png" alt=""></div>Vegoburgare</button>
+                        
+                        <button data-article-name="Vegobiff"><div class="foodicons3"><img src="veg-pic.png" alt=""></div>Vegobiff</button>
+                        
+                        <button data-article-name="Övrigt"><div class="foodicons4"><img src="veg-pic.png" alt=""></div>Övrigt</button>
+                        
+                    </div>
+                    <div class="article-row3">
+                        <button data-article-name="Klippning"><div class="foodicons"><img src="scissors-pic.png" alt=""></div>Klippning</button>
+                        
+                        <button data-article-name="Skägg trimning"><div class="foodicons2"><img src="scissors-pic.png" alt=""></div>Skägg trimning</button>
+                        
+                        <button data-article-name="Färgning"><div class="foodicons3"><img src="scissors-pic.png" alt=""></div>Färgning</button>
+                        
+                        <button data-article-name="Slingor"><div class="foodicons4"><img src="scissors-pic.png" alt=""></div>Slingor</button>
+                        
+                    </div>
+                </div>
+
+                <div class="payment-container">
+                        <!-- <div class="varukorg">
+                            <button class="park-receipt" id="p-button">P</button>
+                            <p>Varukorg (<span class="articles-added">1</span>)</p>
+                            <button class="trashbin">
+                                <img src="trashbin.png" alt="">
+                            </button>
+                        </div> -->
+
+                        <!-- <div class="articleinfo2">
+                            <div class="articleandprice">
+                                <p class="articlename2">article</p>
+                                <p class="price2">100<span>kr</span></p>
+                            </div>
+                            <div class="editarticle">
+                                <div class="plus-minus-signs">
+                                    <button>-</button>
+                                    <button>+</button>
+                                </div>
+                                <div class="trashbin-pen">
+                                    <button>
+                                        <img src="pen-pic.png" alt="">
+                                    </button>
+                                    <button class="article-trashbin2">
+                                        <img src="trashbin.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articleinfo3">
+                            <div class="articleandprice">
+                                <p class="articlename3">article</p>
+                                <p class="price3">100<span>kr</span></p>
+                            </div>
+                            <div class="editarticle">
+                                <div class="plus-minus-signs">
+                                    <button>-</button>
+                                    <button>+</button>
+                                </div>
+                                <div class="trashbin-pen">
+                                    <button>
+                                        <img src="pen-pic.png" alt="">
+                                    </button>
+                                    <button class="article-trashbin3">
+                                        <img src="trashbin.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="payment-methods-container">
+                            <div class="total-amount-container">
+                                <p class="total-text">Totalt</p>
+                                <p class="total-amount">0</p><p>kr</p>
+                            </div>
+                            <div class="payment-buttons-container">
+                                <button class="swish-button">Swish</button>
+                                <button class="kort-button">Kort</button>
+                            </div>
+                        </div> -->
+                </div>
+
+            </div>
+
+            <div class="bottom-buttons">
+                <div class="bottom-buttons-a">
+                    <a class="kassa" href="#">Kassa</a>
+                    <a class="functions" href="#">Funktioner</a>
+                    <a href="#">Lägg till kund</a>
+                    <a class="get-receipt" href="#">Hämta kvitto</a>
+                    <a href="#">Rapporter</a>
+                    <a class="logout" href="#">Logga ut</a>
+                </div>
+                
+                <div class="bottom-buttons-img">
+                    <button>
+                        <img class="keypad" src="keypad.png" alt="">
+                    </button>
+                    <button>
+                        <img class="menu" src="menu.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="login-container">
+            <div>
+                <p>cashify<span>.</span></p>
+            </div>  
+            <div class="digits-container">
+                <h2></h2>
+                <div>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </div>
+                <div>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                </div>
+                <div>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                </div>
+                <div>
+                    <a class="login-clear-button">C</a>
+                    <button>0</button>
+                    <a class="login-ok-button">OK</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="cashify.js"></script>
+
+</body>
+</html>

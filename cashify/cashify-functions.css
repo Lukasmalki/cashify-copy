@@ -1,0 +1,278 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.functions-container {
+    background: rgb(29, 29, 29);
+    width: 640px;
+    height: 525px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    display: none;
+    flex-direction: column;
+}
+
+.functions-title-container {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.functions-container p {
+    color: rgb(216, 216, 216);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.close-menu {
+    cursor: pointer;
+}
+
+.functions-title {
+    margin-left: 230px;
+}
+
+.functions-container button {
+    width: 290px;
+    height: 70px;
+    margin: 0 5px 10px 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+}
+
+.functions-buttons-row1 button {
+    background: rgb(36, 125, 180);
+    cursor: pointer;
+}
+
+.functions-buttons-row2 button {
+    background: rgb(47, 167, 93);
+    cursor: pointer;
+}
+
+.functions-buttons-row3 button {
+    background: rgb(161, 55, 161);
+    cursor: pointer;
+}
+
+.functions-buttons-row4 button {
+    background: rgb(196, 14, 90);
+    cursor: pointer;
+}
+
+.functions-buttons-row5 button {
+    background: rgb(168, 142, 95);
+    cursor: pointer;
+}
+
+.functions-buttons-row1, .functions-buttons-row2, .functions-buttons-row3, .functions-buttons-row4, .functions-buttons-row5 {
+    display: flex;
+    justify-content: center;
+}
+
+.parkreceipt-popup {
+    background: white;
+    height: 220px;
+    width: 350px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 230px;
+    left: 345px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translate(5%, -5%);
+    transition: transform 0.3s;
+}
+
+.parkreceipt-popup.visible {
+    visibility: visible;
+    transform: translate(0%, 0%);
+}
+
+.parkreceipt-popup p {
+    font-size: 30px;
+    margin: 0;
+    color: #666;
+}
+
+.parkreceipt-popup input {
+    width: 272px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(90, 90, 90);
+    padding: 0 0 3px 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #252525;
+}
+
+.parkreceipt-popup input::placeholder{
+    font-size: 17px;
+}
+
+.parkreceipt-popup button {
+    width: 130px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 6px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.avbryt-parkreceipt-button {
+    background: #444;
+}
+
+.confirm-parkreceipt-button {
+    background: rgb(18, 151, 40);
+}
+
+.getreceipt-container {
+    background: rgb(29, 29, 29);
+    width: 640px;
+    height: 525px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    flex-direction: column;
+    display: none;
+}
+
+.getreceipt-title-container {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.getreceipt-container p {
+    color: rgb(216, 216, 216);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.getreceipt-title {
+    margin-left: 230px;
+}
+
+.parked-receipts-container {
+    height: 100%;
+}
+
+.parked-receipts-row1, .parked-receipts-row2, .parked-receipts-row3 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px 30px 20px;
+    position: relative;
+} 
+
+.parked-receipt {
+    background: rgb(99, 99, 99);
+    width: 170px;
+    height: 160px;
+    border-radius: 3px;
+}
+
+p.p-comment {
+    margin: 8px 10px 5px 15px;
+    color: white;
+}
+
+p.p-articlename {
+    margin: 10px 15px 5px 15px;
+    font-size: 16px;
+    color: #adadad;
+}
+
+p.p-price {
+    margin: 55px 15px 5px 15px;
+    font-size: 17px;
+    color: rgb(91, 201, 81);
+}
+
+.parked-receipt1 {
+    background: rgb(99, 99, 99);
+    width: 170px;
+    height: 160px;
+    border-radius: 3px;
+}
+
+p.p-comment1 {
+    margin: 8px 10px 5px 15px;
+    color: white;
+}
+
+p.p-articlename1-1 {
+    margin: 5px 15px 2px 15px;
+    font-size: 16px;
+    color: #adadad;
+}
+
+p.p-articlename1-2, p.p-articlename1-3 {
+    margin: 2px 15px 2px 15px;
+    font-size: 16px;
+    color: #adadad;
+}
+
+p.p-price1 {
+    position: absolute;
+    bottom: 6px;
+    margin: 17px 15px 5px 15px;
+    font-size: 18px;
+    color: rgb(91, 201, 81);
+}
+
+.no-articles-found-popup {
+    background: white;
+    height: 135px;
+    width: 310px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 250px;
+    left: 355px;
+    visibility: hidden;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translate(5%, -5%);
+    transition: transform 0.3s;
+}
+
+.no-articles-found-popup.visible {
+    visibility: visible;
+    transform: translate(0%, 0%);
+}
+
+.no-articles-found-popup p {
+    margin: 0;
+    font-size: 24px;
+    color: #222;
+}
+
+.no-articles-found-popup button {
+    width: 130px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 6px 0 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgb(88, 173, 80);
+    color: white;
+    cursor: pointer;
+}

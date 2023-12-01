@@ -1,0 +1,203 @@
+.payment-container {
+    background: rgb(29, 29, 29);
+    height: 525px;
+    width: 300px;
+    border-radius: 7px;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.scroll-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 330px;
+}
+
+.varukorg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: rgb(29, 29, 29);
+    border-bottom: 1px solid rgba(187, 187, 187, 0.473);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.varukorg img {
+    height: 35px;
+    padding: 0;
+}
+
+.trashbin {
+    height: 35px;
+    padding: 0;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    background: rgb(29, 29, 29);
+}
+
+#p-button {
+    margin-left: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(216, 216, 216);
+    border: none;
+    background: rgb(94, 94, 94);
+    cursor: pointer;
+}
+
+.varukorg p {
+    color: rgb(126, 126, 126);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.articleinfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.articleinfo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.articleinfo3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.articleandprice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 15px 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(1, 170, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 47px;
+}
+
+.price1 span {
+    margin-left: 4px;
+}
+
+.price2 span {
+    margin-left: 4px;
+}
+
+.price3 span {
+    margin-left: 4px;
+}
+
+.editarticle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.editarticle button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(216, 216, 216);
+    border: none;
+    background: rgb(94, 94, 94);
+    cursor: pointer;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.editarticle img {
+    height: 17px;
+}
+
+.plus-minus-signs {
+    margin-left: 10px;
+}
+
+.plus-minus-signs button {
+    padding-bottom: 5px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.trashbin-pen {
+    margin-right: 10px;
+}
+
+.payment-methods-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    visibility: visible;
+}
+
+.payment-methods-container.show {
+    visibility: visible;
+}
+
+.total-amount-container {
+    display: flex;    
+    height: 50px;
+}
+
+.total-amount-container p {
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.total-amount {
+    margin-left: 178px;
+    margin-right: 5px;
+}
+
+.total-text {
+    margin-left: 13px;
+}
+
+.payment-buttons-container {
+    display: flex;
+}
+
+.payment-buttons-container button {
+    width: 500px;
+    height: 37px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+.swish-button {
+    margin-left: 7px;
+    margin-right: 4px;
+    background: rgb(87, 119, 223);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kort-button {
+    margin-right: 7px;
+    margin-left: 4px;
+    background: rgb(110, 196, 110);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

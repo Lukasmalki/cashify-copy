@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(cashify-background.png);
+    background-size: cover;
+    backdrop-filter: grayscale(100%);
+    backdrop-filter: brightness(40%);
+}
+
+.padda {
+    background: rgb(0, 0, 0);
+    border-radius: 17px;
+    border: 3px solid rgb(83, 83, 83);
+    width: 1050px;
+    height: 655px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.camera {
+    width: 10px;
+    height: 10px;
+    background: rgb(65, 65, 65);
+    pointer-events: none;
+    position: absolute;
+    top: 7px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cashify {
+    background: rgb(37, 37, 37);
+    width: 970px;
+    height: 585px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: auto;
+    visibility: hidden;
+}
+
+.cashify.visible {
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.cashify.show {
+    visibility: visible;
+}
+
+.uppe {
+    display: flex;
+    flex-direction: row;
+}
+
+.groups {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.473);
+}
+
+.groups button {
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.start {
+    background-color: rgb(65, 65, 65);
+    position: relative;
+}
+
+.start.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    background-color: rgb(65, 65, 65);
+    height: 3px;
+    width: 100%;
+}
+
+.mat {
+    background-color: rgb(190, 58, 168);
+    position: relative;
+}
+
+.mat.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: rgb(190, 58, 168);
+    height: 3px;
+    width: 100%;
+}
+
+.dryck {
+    background-color: rgb(14, 145, 43);
+    position: relative;
+}
+
+.dryck.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: rgb(14, 145, 43);
+    height: 3px;
+    width: 100%;
+}
+
+.article-container {
+    background: rgb(29, 29, 29);
+    width: 640px;
+    height: 525px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.article-row1, .article-row2, .article-row3 {
+    margin-left: 13px;
+    position: relative;
+}
+
+.article-row1 button, .article-row2 button, .article-row3 button {
+    width: 140px;
+    height: 100px;
+    border: none;
+    margin-left: 7px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 60px;
+}
+
+.article-row1 button {
+    background: rgb(190, 58, 168);
+}
+
+.article-row2 button {
+    background: rgb(141, 175, 149);
+    
+}
+
+.article-row3 button {
+    background: rgb(201, 129, 22);
+}
+
+.foodicons {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    cursor: pointer;
+}
+
+.foodicons img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.foodicons2 {
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    cursor: pointer;
+}
+
+.foodicons2 img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.foodicons3 {
+    position: absolute;
+    top: 20px;
+    left: 360px;
+    cursor: pointer;
+}
+
+.foodicons3 img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.foodicons4 {
+    position: absolute;
+    top: 20px;
+    left: 510px;
+    cursor: pointer;
+}
+
+.foodicons4 img {
+    height: 40px;
+    object-fit: contain;
+}

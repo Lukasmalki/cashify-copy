@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.background-pic {
+    background-image: url(bilder/contact-backgroundpic.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    width: 50px;
+}
+
+.back-button img {
+    width: 75px;
+    height: 50px;
+    margin-left: 565px;
+    margin-bottom: 940px;
+}
+
+.mailaoss {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 995px;
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 3px 3px rgba(88, 27, 27, 0.466);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 25px;
+    color: white;
+    background: black;
+    height: 100px;
+}
+
+.firstname {
+    margin: 50px 0 50px 25px;
+}
+
+.firstname input {
+    width: 250px;
+    height: 50px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.lastname {
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+
+.lastname input {
+    width: 250px;
+    height: 50px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.mail {
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+.mail input {
+    width: 250px;
+    height: 50px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.phonenumber {
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.disabled {
+    height: 35px;
+    width: 40px;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+}
+
+.number {
+    width: 200px;
+    height: 35px;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.choosecountry {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+.choosecountry select {
+    height: 30px;
+    width: 100px;
+    margin: 10px 0 30px 17px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.subject {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.subject select {
+    height: 30px;
+    width: 200px;
+    margin-left: 17px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.comment {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.comment input {
+    font-size: 20px;
+    padding: 10px 290px 170px 10px;
+}
+
+.sendbutton {
+    display: flex;
+    justify-content: right;
+    margin-top: 25px;
+}
+
+.sendbutton button {
+    width: 150px;
+    height: 40px;
+    margin-right: 29px;
+    border: none;
+    background: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
