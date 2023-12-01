@@ -68,6 +68,7 @@ let activeButton = null;
             `)
             let scrollContainer = document.querySelector('.scroll-container');
         paymentObject.map((e)=>{
+            
             scrollContainer.insertAdjacentHTML('beforeend', `
             <div>
                 <div class="articleinfo">
