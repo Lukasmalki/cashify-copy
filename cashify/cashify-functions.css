@@ -3,7 +3,7 @@
 }
 
 .functions-container {
-    background: rgb(29, 29, 29);
+    background: rgb(14, 14, 14);
     width: 640px;
     height: 525px;
     margin-top: 10px;
@@ -141,7 +141,7 @@
 }
 
 .getreceipt-container {
-    background: rgb(29, 29, 29);
+    background: rgb(14, 14, 14);
     width: 640px;
     height: 525px;
     margin-top: 10px;
@@ -169,31 +169,28 @@
 
 .parked-receipts-container {
     height: 100%;
-}
-
-.parked-receipts-row1, .parked-receipts-row2, .parked-receipts-row3 {
     display: flex;
-    justify-content: space-around;
-    margin: 0 20px 30px 20px;
-    position: relative;
-} 
-
-.parked-receipt {
-    background: rgb(99, 99, 99);
-    width: 170px;
-    height: 160px;
-    border-radius: 3px;
 }
 
-p.p-comment {
-    margin: 8px 10px 5px 15px;
-    color: white;
+.p-scroll-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    margin: 0 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;  
 }
 
-p.p-articlename {
-    margin: 10px 15px 5px 15px;
-    font-size: 16px;
-    color: #adadad;
+.p-scroll-container::-webkit-scrollbar {
+    background: rgb(39, 39, 39);
+    border-radius: 20px;
+}
+
+.p-scroll-container::-webkit-scrollbar-thumb {
+    background: rgb(201, 201, 201);
+    border-radius: 20px;
 }
 
 p.p-price {
@@ -202,36 +199,36 @@ p.p-price {
     color: rgb(91, 201, 81);
 }
 
-.parked-receipt1 {
-    background: rgb(99, 99, 99);
-    width: 170px;
-    height: 160px;
-    border-radius: 3px;
+.parked-receipt {
+    background: rgb(49, 49, 49);
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    position: relative;
+    margin: 10px 7px 10px 7px;
+    cursor: pointer;
 }
 
-p.p-comment1 {
-    margin: 8px 10px 5px 15px;
+p.p-comment {
+    margin: 8px 15px 5px 15px;
     color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-p.p-articlename1-1 {
-    margin: 5px 15px 2px 15px;
+p.p-articlename1, p.p-articlename2, p.p-articlename3 {
+    margin: 5px 15px -3px 15px;
     font-size: 16px;
-    color: #adadad;
+    color: rgb(155, 155, 155);
 }
 
-p.p-articlename1-2, p.p-articlename1-3 {
-    margin: 2px 15px 2px 15px;
-    font-size: 16px;
-    color: #adadad;
-}
-
-p.p-price1 {
-    position: absolute;
-    bottom: 6px;
-    margin: 17px 15px 5px 15px;
+p.p-price {
+    margin: 0px 15px 0px 15px;
     font-size: 18px;
     color: rgb(91, 201, 81);
+    position: absolute;
+    bottom: 10px;
 }
 
 .no-articles-found-popup {

@@ -11,35 +11,16 @@ let activeButton = null;
     let articleClick = document.querySelectorAll('.article-row1 button, .article-row2 button, .article-row3 button');
 
     let articleInfo = document.querySelector('.articleinfo');
-    let articleInfo2 = document.querySelector('.articleinfo2');
-    let articleInfo3 = document.querySelector('.articleinfo3');
-    let paymentContainer = document.querySelector('.payment-container')
     let articleNewName = document.querySelector('.articlename');
-    let articleNewName2 = document.querySelector('.articlename2');
-    let articleNewName3 = document.querySelector('.articlename3');
-
-    let isButtonClicked = '';
+    let paymentContainer = document.querySelector('.payment-container');
 
     let varukorg = document.querySelector('.varukorg');
     let paymentMethodsContainer = document.querySelector('.payment-methods-container');
 
     let articlesAdded = document.querySelector('.articles-added');
-    
-    // let priceOfArticle1 = document.querySelector('p.price1');
-    // priceOfArticle1 = priceOfArticle1.innerText.replace(/\D/g, "");
-    // priceOfArticle1 = parseInt(priceOfArticle1);
-
-    // let priceOfArticle2 = document.querySelector('p.price2');
-    // priceOfArticle2 = priceOfArticle2.innerText.replace(/\D/g, "");
-    // priceOfArticle2 = parseInt(priceOfArticle2);
-
-    // let priceOfArticle3 = document.querySelector('p.price3');
-    // priceOfArticle3 = priceOfArticle3.innerText.replace(/\D/g, "");
-    // priceOfArticle3 = parseInt(priceOfArticle3);
-
-    // let totalPriceElement = document.querySelector('p.total-amount');
-    let paymentObject = [];
     let totalPrice = 0;
+    
+    let paymentObject = [];
 
     articleClick.forEach(articleClick => {
         articleClick.addEventListener('click', () => {
@@ -50,31 +31,27 @@ let activeButton = null;
             } else {
                 paymentObject.push({'article':articleClick.getAttribute('data-article-name'), 'price':100})
             }
-            console.log(paymentObject)
-            
-            // let totalPrice = parseInt(totalPriceElement.innerText);
 
             paymentContainer.innerHTML=""
             paymentContainer.insertAdjacentHTML("afterbegin", `
             <div class="varukorg">
-                <button class="park-receipt" id="p-button">P</button>
+                <button class="park-receipt" id="p-button" onclick="parkReceiptButton()">P</button>
                 <p>Varukorg (<span class="articles-added">${paymentObject.length}</span>)</p>
-                <button onclick="bigTrashBinButton()" class="trashbin">
+                <button onclick="bigTrashbinButton()" class="trashbin">
                     <img src="trashbin.png" alt="">
                 </button>
             </div>
             <div class="scroll-container">
-            </div>
-            `)
-            let scrollContainer = document.querySelector('.scroll-container');
-        paymentObject.map((e)=>{
-            
-            scrollContainer.insertAdjacentHTML('beforeend', `
-            <div>
+            </div>`)
+
+        let scrollContainer = document.querySelector('.scroll-container');
+
+        paymentObject.map((e, index)=>{
+            scrollContainer.insertAdjacentHTML('beforeend',`
                 <div class="articleinfo">
                     <div class="articleandprice">
                         <p class="articlename">${e.article}</p>
-                        <p class="price1">${e.price}<span>kr</span></p>
+                        <p class="price">${e.price}<span>kr</span></p>
                     </div>
                     <div class="editarticle">
                         <div class="plus-minus-signs">
@@ -85,91 +62,42 @@ let activeButton = null;
                             <button>
                                 <img src="pen-pic.png" alt="">
                             </button>
-                            <button class="article-trashbin1">
+                            <button onclick="removeArticle(${index})" class="article-trashbin">
                                 <img src="trashbin.png" alt="">
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-            `)
-            console.log(totalPrice);
+                </div>`)
         })
-
+        
         paymentContainer.insertAdjacentHTML('beforeend', `
         <div class="payment-methods-container">
             <div class="total-amount-container">
                 <p class="total-text">Totalt</p>
-                <p class="total-amount">${paymentObject.reduce((accumulator, paymentObject) => accumulator + (paymentObject.price || 0),0)}</p><p>kr</p>
+                <p class="total-amount">${totalPrice = paymentObject.reduce((accumulator, paymentObject) => accumulator + (paymentObject.price || 0),0)}</p><p>kr</p>
             </div>
             <div class="payment-buttons-container">
                 <button class="swish-button">Swish</button>
                 <button class="kort-button">Kort</button>
             </div>
         </div>`)
-
-        
-
-        // paymentObject.map((e)=> {
-        //     paymentContainer.insertAdjacentHTML('afterbegin', `
-        //     <div class="payment-methods-container">
-        //         <div class="total-amount-container">
-        //             <p class="total-text">Totalt</p>
-        //             <p class="total-amount">${totalPrice += e.price}</p><p>kr</p>
-        //         </div>
-        //         <div class="payment-buttons-container">
-        //             <button class="swish-button">Swish</button>
-        //             <button class="kort-button">Kort</button>
-        //         </div>
-        //     </div>`)
-        // })
-
-           
-            console.log(paymentContainer)
-            // else if (isButtonClicked === 2 && totalPrice < 300) {
-            //     let articleName2 = articleClick.getAttribute('data-article-name');
-            //     articleNewName2.innerText = articleName2;
-            //     articleInfo2.style.display = 'flex';
-            //     varukorg.style.display = 'flex';
-
-            //     totalPrice += priceOfArticle2;
-            //     totalPriceElement.innerText = totalPrice;
-
-            // } else if (isButtonClicked === 3 && totalPrice < 300) {
-            //     let articleName3 = articleClick.getAttribute('data-article-name');
-            //     articleNewName3.innerText = articleName3;
-            //     articleInfo3.style.display = 'flex';
-            //     varukorg.style.display = 'flex';
-
-            //     totalPrice += priceOfArticle3;
-            //     totalPriceElement.innerText = totalPrice;
-            // }
-            console.log(isButtonClicked);
         });
     });
-    function bigTrashBinButton () {
+    function bigTrashbinButton () {
         paymentObject = [];
         paymentContainer.innerHTML=""
     }
-    
 
+    function removeArticle (index) {
+        console.log(index);
+        let removeOneArticle = paymentObject.splice(index, 1)
+        console.log(removeOneArticle);
+        // if (paymentObject.length === 0) {
+        //     paymentObject = []
+        //     paymentContainer.innerHTML=""
+        // }
 
-
-// function removeAllArticles() {
-//     articleInfo.style.display = 'none';
-//     articleInfo2.style.display = 'none';
-//     articleInfo3.style.display = 'none';
-//     varukorg.style.display = 'none';
-//     isButtonClicked = 0;
-//     paymentMethodsContainer.classList.remove('show');
-//     totalPrice = 0;
-//     totalPriceElement.innerText = totalPrice;
-//     console.log(isButtonClicked);
-// }
-
-
-//     let removeArticle1 = document.querySelector('.article-trashbin1');
-
+    }
 //     removeArticle1.addEventListener('click', () => {
 //         articleInfo.style.display = 'none';
 //         isButtonClicked--;
@@ -404,23 +332,20 @@ let loginContainer = document.querySelector('.login-container');
         }
     })
 
-    
-let parkReceiptButtons = document.querySelectorAll('.park-receipt');
+
 let parkReceiptPopup = document.querySelector('.parkreceipt-popup');
 let noArticlesFound = document.querySelector('.no-articles-found-popup');
 
-    parkReceiptButtons.forEach(parkReceiptButton => {
-        parkReceiptButton.addEventListener('click', () => {
-            
-            if (varukorg.style.display !== 'flex') {
-                cashifyContainer.classList.add('visible');
-                noArticlesFound.classList.add('visible');
-            } else {
-                cashifyContainer.classList.add('visible');
-                parkReceiptPopup.classList.add('visible');
-            }
-        })
-    })
+
+function parkReceiptButton() {
+    if (paymentObject.length === 0) {
+        cashifyContainer.classList.add('visible');
+        noArticlesFound.classList.add('visible');
+    } else {
+        cashifyContainer.classList.add('visible');
+        parkReceiptPopup.classList.add('visible');
+    }
+}
 
 
 let noArticlesOkBtn = document.querySelector('.no-articles-ok');
@@ -432,12 +357,12 @@ let noArticlesOkBtn = document.querySelector('.no-articles-ok');
 
 
 let cancelParkReceiptBtn = document.querySelector('.avbryt-parkreceipt-button');
-let parkReceiptInput = document.querySelector('.parkreceipt-popup input')
+let comment = document.querySelector('.parkreceipt-popup input')
 
     cancelParkReceiptBtn.addEventListener('click', () => {
         parkReceiptPopup.classList.remove('visible');
         cashifyContainer.classList.remove('visible');
-        parkReceiptInput.value = '';
+        comment.value = '';
     })
 
 
@@ -455,25 +380,92 @@ let getReceiptContainer = document.querySelector('.getreceipt-container');
 
 
 let confirmParkBtn = document.querySelector('.confirm-parkreceipt-button');
-
-let parkedReceiptComment1 = document.querySelector('p.p-comment1');
-let parkedReceiptArticle1_1 = document.querySelector('p.p-articlename1-1');
-let parkedReceiptArticle1_2 = document.querySelector('p.p-articlename1-2');
-let parkedReceiptArticle1_3 = document.querySelector('p.p-articlename1-3');
+let pScrollContainer = document.querySelector('.p-scroll-container')
+let parkedReceiptsObject = [];
+let saveReceiptObject = [];
 
     confirmParkBtn.addEventListener('click', () => {
+
         parkReceiptPopup.classList.remove('visible');
         cashifyContainer.classList.remove('visible');
+        
+        saveReceiptObject = paymentObject;
 
-        if (parkReceiptInput.value == '') {
-            parkedReceiptComment1.innerText = 'Kvitto #'
-            parkedReceiptArticle1_1.innerText = articleNewName.innerText;
-        } else {
-            parkedReceiptComment1.innerText = parkReceiptInput.value
-            parkedReceiptArticle1_1.innerText = articleNewName.innerText;
-        }
+        parkedReceiptsObject.push(paymentObject);
 
+        parkedReceiptsObject.map((e)=>{
+            pScrollContainer.insertAdjacentHTML('beforeend', `
+            <div onclick="parkedReceiptClick()" class="parked-receipt">
+                <p class="p-comment">${(comment.value === '' ? 'Kvitto #' : `${comment.value}`)}</p>
+                <p class="p-articlename1">${e[0].article}</p>
+                <p class="p-articlename2">${(e[1]?.article === undefined) ? '' : `${e[1].article}`}</p>
+                <p class="p-articlename3">${(paymentObject.length >= 3 ? `+${paymentObject.length - 2}` : '')}</p>
+                <p class="p-price">${totalPrice} kr</p>
+            </div>`)
+        })
 
-        parkReceiptInput.value = '';
-        removeAllArticles();
+        parkedReceiptsObject = [];
+        paymentObject = [];
+        paymentContainer.innerHTML="";
+        comment.value = '';
     })
+
+
+    function parkedReceiptClick() {
+        paymentObject = saveReceiptObject;
+        articleContainer.style.display = '';
+        getReceiptContainer.style.display = 'none';
+
+        paymentContainer.innerHTML = "";
+
+        paymentContainer.insertAdjacentHTML("afterbegin", `
+        <div class="varukorg">
+            <button class="park-receipt" id="p-button" onclick="parkReceiptButton()">P</button>
+            <p>Varukorg (<span class="articles-added">${paymentObject.length}</span>)</p>
+            <button onclick="bigTrashbinButton()" class="trashbin">
+                <img src="trashbin.png" alt="">
+            </button>
+        </div>
+        <div class="scroll-container">
+        </div>`)
+
+    let scrollContainer = document.querySelector('.scroll-container');
+
+    paymentObject.map((e, index)=>{
+        scrollContainer.insertAdjacentHTML('beforeend',`
+            <div class="articleinfo">
+                <div class="articleandprice">
+                    <p class="articlename">${e.article}</p>
+                    <p class="price">${e.price}<span>kr</span></p>
+                </div>
+                <div class="editarticle">
+                    <div class="plus-minus-signs">
+                        <button>-</button>
+                        <button>+</button>
+                    </div>
+                    <div class="trashbin-pen">
+                        <button>
+                            <img src="pen-pic.png" alt="">
+                        </button>
+                        <button onclick="removeArticle(${index})" class="article-trashbin">
+                            <img src="trashbin.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>`)
+    })
+    
+        paymentContainer.insertAdjacentHTML('beforeend', `
+        <div class="payment-methods-container">
+            <div class="total-amount-container">
+                <p class="total-text">Totalt</p>
+                <p class="total-amount">${totalPrice = paymentObject.reduce((accumulator, paymentObject) => accumulator + (paymentObject.price || 0),0)}</p><p>kr</p>
+            </div>
+            <div class="payment-buttons-container">
+                <button class="swish-button">Swish</button>
+                <button class="kort-button">Kort</button>
+            </div>
+        </div>`)
+
+    }
+        

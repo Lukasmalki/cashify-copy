@@ -5,7 +5,7 @@
 .menu-container {
     display: none;
     flex-direction: row;
-    background: rgb(29, 29, 29);
+    background: rgb(14, 14, 14);
     width: 640px;
     height: 525px;
     margin-top: 10px;
@@ -16,7 +16,7 @@
 .menu-leftsection {
     width: 150px;
     height: 100%;
-    background: #161616;
+    background: rgb(9, 9, 9);
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
 }
@@ -71,7 +71,7 @@
     border-radius: 7px;
     font-size: 14px;
     font-weight: 500;
-    color: rgb(173, 173, 173);
+    color: rgb(229, 229, 229);
     background: none;
     cursor: pointer;
     text-align: left;

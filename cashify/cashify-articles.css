@@ -14,7 +14,7 @@ body {
 .padda {
     background: rgb(0, 0, 0);
     border-radius: 17px;
-    border: 3px solid rgb(83, 83, 83);
+    border: 3px solid rgb(37, 37, 37);
     width: 1050px;
     height: 655px;
     display: flex;
@@ -26,7 +26,7 @@ body {
 .camera {
     width: 10px;
     height: 10px;
-    background: rgb(65, 65, 65);
+    background: rgb(46, 46, 46);
     pointer-events: none;
     position: absolute;
     top: 7px;
@@ -35,7 +35,7 @@ body {
 }
 
 .cashify {
-    background: rgb(37, 37, 37);
+    background: rgb(21, 21, 21);
     width: 970px;
     height: 585px;
     display: flex;
@@ -125,7 +125,7 @@ body {
 }
 
 .article-container {
-    background: rgb(29, 29, 29);
+    background: rgb(14, 14, 14);
     width: 640px;
     height: 525px;
     margin-top: 10px;

@@ -81,51 +81,7 @@
                         <p class="getreceipt-title">Hämta kvitto</p>
                     </div>
                     <div class="parked-receipts-container">
-                        <div class="parked-receipts-row1">
-                            <div class="parked-receipt1">
-                                <p class="p-comment1">Kvitto #</p>
-                                <p class="p-articlename1-1"></p>
-                                <p class="p-articlename1-2"></p>
-                                <p class="p-articlename1-3"></p>
-                                <p class="p-price1">100 kr</p>
-                            </div>
-                            <div class="parked-receipt">
-                                <p class="p-comment">hej</p>
-                                <p class="p-articlename2-1"></p>
-                                <p class="p-articlename2-2"></p>
-                                <p class="p-articlename2-3"></p>
-                                <p class="p-price">hej</p>
-                            </div>
-                            <div class="parked-receipt">
-                                <p class="p-comment">hej</p>
-                                <p class="p-articlename3-1"></p>
-                                <p class="p-articlename3-2"></p>
-                                <p class="p-articlename3-3"></p>
-                                <p class="p-price">hej</p>
-                            </div>
-                        </div>
-                        <div class="parked-receipts-row2">
-                            <div class="parked-receipt">
-                                <p class="p-comment">hej</p>
-                                <p class="p-articlename4-1"></p>
-                                <p class="p-articlename4-2"></p>
-                                <p class="p-articlename4-3"></p>
-                                <p class="p-price">hej</p>
-                            </div>
-                            <div class="parked-receipt">
-                                <p class="p-comment">hej</p>
-                                <p class="p-articlename5-1"></p>
-                                <p class="p-articlename5-2"></p>
-                                <p class="p-articlename5-3"></p>
-                                <p class="p-price">hej</p>
-                            </div>
-                            <div class="parked-receipt">
-                                <p class="p-comment">hej</p>
-                                <p class="p-articlename6-1"></p>
-                                <p class="p-articlename6-2"></p>
-                                <p class="p-articlename6-3"></p>
-                                <p class="p-price">hej</p>
-                            </div>
+                        <div class="p-scroll-container">
                         </div>
                     </div>
                 </div>
@@ -137,7 +93,7 @@
                         <p class="functions-title">Funktioner</p>
                     </div>        
                     <div class="functions-buttons-row1">
-                        <button class="park-receipt">Parkera kvitto</button>
+                        <button class="park-receipt" onclick="parkReceiptButton()">Parkera kvitto</button>
                         <button class="get-receipt">Hämta kvitto</button>
                     </div>
                     <div class="functions-buttons-row2">
@@ -192,7 +148,7 @@
                             </div>
                         </div>
                         <div class="googleplay-container">
-                            <p>Version: 1.35</p>
+                            <p>Version: 1.36</p>
                             <button class="googleplay-button"><img src="googleplay-logo.png" alt="Play Butik">Google Play</button>
                             <button class="dagsavslut-button">Dagsavslut</button>
                         </div>
@@ -246,64 +202,7 @@
                 </div>
 
                 <div class="payment-container">
-                        <!-- <div class="varukorg">
-                            <button class="park-receipt" id="p-button">P</button>
-                            <p>Varukorg (<span class="articles-added">1</span>)</p>
-                            <button class="trashbin">
-                                <img src="trashbin.png" alt="">
-                            </button>
-                        </div> -->
-
-                        <!-- <div class="articleinfo2">
-                            <div class="articleandprice">
-                                <p class="articlename2">article</p>
-                                <p class="price2">100<span>kr</span></p>
-                            </div>
-                            <div class="editarticle">
-                                <div class="plus-minus-signs">
-                                    <button>-</button>
-                                    <button>+</button>
-                                </div>
-                                <div class="trashbin-pen">
-                                    <button>
-                                        <img src="pen-pic.png" alt="">
-                                    </button>
-                                    <button class="article-trashbin2">
-                                        <img src="trashbin.png" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articleinfo3">
-                            <div class="articleandprice">
-                                <p class="articlename3">article</p>
-                                <p class="price3">100<span>kr</span></p>
-                            </div>
-                            <div class="editarticle">
-                                <div class="plus-minus-signs">
-                                    <button>-</button>
-                                    <button>+</button>
-                                </div>
-                                <div class="trashbin-pen">
-                                    <button>
-                                        <img src="pen-pic.png" alt="">
-                                    </button>
-                                    <button class="article-trashbin3">
-                                        <img src="trashbin.png" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="payment-methods-container">
-                            <div class="total-amount-container">
-                                <p class="total-text">Totalt</p>
-                                <p class="total-amount">0</p><p>kr</p>
-                            </div>
-                            <div class="payment-buttons-container">
-                                <button class="swish-button">Swish</button>
-                                <button class="kort-button">Kort</button>
-                            </div>
-                        </div> -->
+                    <div class="cashify-logo"><img src="cashify logga.png"></div>
                 </div>
 
             </div>
@@ -332,7 +231,7 @@
 
         <div class="login-container">
             <div>
-                <p>cashify<span>.</span></p>
+                <img src="cashify logga.png">
             </div>  
             <div class="digits-container">
                 <h2></h2>
