@@ -86,12 +86,17 @@ let activeButton = null;
     function bigTrashbinButton () {
         paymentObject = [];
         paymentContainer.innerHTML=""
+        paymentContainer.insertAdjacentHTML('beforeend', `
+        <div class="cashify-logo"><img src="cashify logga.png"></div>
+        `)
     }
 
     function removeArticle (index) {
         console.log(index);
         let removeOneArticle = paymentObject.splice(index, 1)
         console.log(removeOneArticle);
+        console.log(paymentObject);
+        removeOneArticle.innerHTML = "";
         // if (paymentObject.length === 0) {
         //     paymentObject = []
         //     paymentContainer.innerHTML=""
@@ -393,9 +398,9 @@ let saveReceiptObject = [];
 
         parkedReceiptsObject.push(paymentObject);
 
-        parkedReceiptsObject.map((e)=>{
+        parkedReceiptsObject.map((e,index)=>{
             pScrollContainer.insertAdjacentHTML('beforeend', `
-            <div onclick="parkedReceiptClick()" class="parked-receipt">
+            <div onclick="parkedReceiptClick(${index})" class="parked-receipt">
                 <p class="p-comment">${(comment.value === '' ? 'Kvitto #' : `${comment.value}`)}</p>
                 <p class="p-articlename1">${e[0].article}</p>
                 <p class="p-articlename2">${(e[1]?.article === undefined) ? '' : `${e[1].article}`}</p>
@@ -411,11 +416,11 @@ let saveReceiptObject = [];
     })
 
 
-    function parkedReceiptClick() {
+    function parkedReceiptClick(index) {
         paymentObject = saveReceiptObject;
         articleContainer.style.display = '';
         getReceiptContainer.style.display = 'none';
-
+        
         paymentContainer.innerHTML = "";
 
         paymentContainer.insertAdjacentHTML("afterbegin", `

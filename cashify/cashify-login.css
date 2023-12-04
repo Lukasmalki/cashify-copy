@@ -1,5 +1,5 @@
 .login-container {
-    background: rgb(14, 14, 14);
+    background: rgb(17, 17, 17);
     width: 970px;
     height: 585px;
     display: flex;
@@ -33,7 +33,7 @@
     border-radius: 50%;
     margin: 5px 4px;
     font-size: 22px;
-    background: rgb(49, 49, 49);
+    background: rgb(59, 59, 59);
     color: white;
     cursor: pointer;
 }
@@ -45,7 +45,7 @@
     margin: 5px 4px;
     font-size: 22px;
     cursor: pointer;
-    background: rgb(49, 49, 49);
+    background: rgb(59, 59, 59);
     color: white;
 }
 
@@ -57,7 +57,7 @@
     font-size: 22px;
     cursor: pointer;
     color: rgb(17, 17, 17);
-    background: #d8d8d8;
+    background: #f1f1f1;
 }
 
 .digits-container h2 {

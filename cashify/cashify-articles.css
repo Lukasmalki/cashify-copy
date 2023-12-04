@@ -35,7 +35,7 @@ body {
 }
 
 .cashify {
-    background: rgb(21, 21, 21);
+    background: rgb(25, 25, 25);
     width: 970px;
     height: 585px;
     display: flex;
@@ -125,7 +125,7 @@ body {
 }
 
 .article-container {
-    background: rgb(14, 14, 14);
+    background: rgb(17, 17, 17);
     width: 640px;
     height: 525px;
     margin-top: 10px;

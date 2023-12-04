@@ -1,5 +1,5 @@
 .payment-container {
-    background: rgb(14, 14, 14);
+    background: rgb(17, 17, 17);
     height: 525px;
     width: 300px;
     border-radius: 7px;
@@ -20,6 +20,7 @@
     overflow-x: hidden;
     height: 335px;
     margin-top: 10px;
+    background: rgb(17, 17, 17);
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -37,7 +38,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background: rgb(14, 14, 14);
+    background: rgb(17, 17, 17);
     border-bottom: 1px solid rgba(187, 187, 187, 0.473);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -66,7 +67,7 @@
     font-weight: bold;
     color: rgb(229, 229, 229);
     border: none;
-    background: rgb(49, 49, 49);
+    background: rgb(56, 56, 56);
     cursor: pointer;
 }
 
@@ -115,7 +116,7 @@
     font-weight: bold;
     color: rgb(229, 229, 229);
     border: none;
-    background: rgb(49, 49, 49);
+    background: rgb(56, 56, 56);
     cursor: pointer;
     margin-right: 1px;
     margin-left: 1px;
