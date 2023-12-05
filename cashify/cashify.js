@@ -48,7 +48,7 @@ let activeButton = null;
             
         paymentObject.map((e, index)=>{
             scrollContainer.insertAdjacentHTML('beforeend',`
-                <div class="articleinfo">
+                <div class="articleinfo" id="">
                     <div class="articleandprice">
                         <p class="articlename">${e.article}</p>
                         <p class="price">${e.price}<span>kr</span></p>
@@ -99,21 +99,40 @@ let activeButton = null;
 
     function removeArticle (index) {
         updateScrollContainer();
-        articleInfo = scrollContainer.querySelector(`.articleinfo:nth-child(${index + 2})`)
-        let removeArticleObject = paymentObject.splice(index, 1)[0];
-        
-        if (articleInfo) {
-            scrollContainer.removeChild(articleInfo);
-        }
-        
-        console.log(index);
-        console.log(articleInfo);
-        console.log(paymentObject)
-        // if (paymentObject.length === 0) {
-        //     paymentObject = []
-        //     paymentContainer.innerHTML=""
-        // }
-
+        // articleInfo = document.querySelector('.articleinfo');
+        // articleInfo.id = index;
+        // scrollContainer.removeChild(articleInfo);
+        // console.log(articleInfo.id)
+        // paymentObject = paymentObject.splice(index, 1);
+        paymentObject.filter((v,e)=> e !== index)
+        console.log(index)
+        // scrollContainer = '';
+        paymentObject.map((e, index)=>{
+            scrollContainer.insertAdjacentHTML('beforeend',`
+                <div class="articleinfo" id="">
+                    <div class="articleandprice">
+                        <p class="articlename">${e.article}</p>
+                        <p class="price">${e.price}<span>kr</span></p>
+                    </div>
+                    <div class="editarticle">
+                        <div class="plus-minus-signs">
+                            <button>-</button>
+                            <button>+</button>
+                        </div>
+                        <div class="trashbin-pen">
+                            <button>
+                                <img src="pen-pic.png" alt="">
+                            </button>
+                            <button onclick="removeArticle(${index})" class="article-trashbin">
+                                <img src="trashbin.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>`)
+        })
+        // console.log(index);
+        // console.log(articleInfo);
+        // console.log(paymentObject)
     }
 //     removeArticle1.addEventListener('click', () => {
 //         articleInfo.style.display = 'none';
