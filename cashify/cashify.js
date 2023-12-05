@@ -7,9 +7,9 @@ let activeButton = null;
         activeButton = button;
         activeButton.classList.add('active');
     }
-
+    
     let articleClick = document.querySelectorAll('.article-row1 button, .article-row2 button, .article-row3 button');
-
+    
     let articleInfo = document.querySelector('.articleinfo');
     let articleNewName = document.querySelector('.articlename');
     let paymentContainer = document.querySelector('.payment-container');
@@ -19,7 +19,7 @@ let activeButton = null;
 
     let articlesAdded = document.querySelector('.articles-added');
     let totalPrice = 0;
-    
+    let scrollContainer;
     let paymentObject = [];
 
     articleClick.forEach(articleClick => {
@@ -44,8 +44,8 @@ let activeButton = null;
             <div class="scroll-container">
             </div>`)
 
-        let scrollContainer = document.querySelector('.scroll-container');
-
+            updateScrollContainer();
+            
         paymentObject.map((e, index)=>{
             scrollContainer.insertAdjacentHTML('beforeend',`
                 <div class="articleinfo">
@@ -83,6 +83,12 @@ let activeButton = null;
         </div>`)
         });
     });
+
+    function updateScrollContainer() {
+        scrollContainer = document.querySelector('.scroll-container');
+    }
+
+
     function bigTrashbinButton () {
         paymentObject = [];
         paymentContainer.innerHTML=""
@@ -92,11 +98,17 @@ let activeButton = null;
     }
 
     function removeArticle (index) {
+        updateScrollContainer();
+        articleInfo = scrollContainer.querySelector(`.articleinfo:nth-child(${index + 2})`)
+        let removeArticleObject = paymentObject.splice(index, 1)[0];
+        
+        if (articleInfo) {
+            scrollContainer.removeChild(articleInfo);
+        }
+        
         console.log(index);
-        let removeOneArticle = paymentObject.splice(index, 1)
-        console.log(removeOneArticle);
-        console.log(paymentObject);
-        removeOneArticle.innerHTML = "";
+        console.log(articleInfo);
+        console.log(paymentObject)
         // if (paymentObject.length === 0) {
         //     paymentObject = []
         //     paymentContainer.innerHTML=""
