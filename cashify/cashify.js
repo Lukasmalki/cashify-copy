@@ -69,7 +69,6 @@ let activeButton = null;
                     </div>
                 </div>`)
         })
-        
         paymentContainer.insertAdjacentHTML('beforeend', `
         <div class="payment-methods-container">
             <div class="total-amount-container">
@@ -107,9 +106,6 @@ let activeButton = null;
     
         // Update the UI
         updateUI();
-    
-        // You can log or use the removed article if needed
-        console.log("Removed Article:", removedArticle);
 
         if (paymentObject.length === 0) {
             clearPaymentContainer ();
@@ -399,14 +395,17 @@ let confirmParkBtn = document.querySelector('.confirm-parkreceipt-button');
 let pScrollContainer = document.querySelector('.p-scroll-container')
 let parkedReceiptsObject = [];
 let saveReceiptObject = [];
-
         confirmParkBtn.addEventListener('click', () => {
 
             parkReceiptPopup.classList.remove('visible');
             cashifyContainer.classList.remove('visible');
             
             parkedReceiptsObject.push(paymentObject);
-            saveReceiptObject = paymentObject;
+            saveReceiptObject.push(paymentObject);
+            // paymentObject.forEach(obj => {
+            //     saveReceiptObject.push(obj);
+            // });
+
 
             parkedReceiptsObject.map((e,index)=>{
                 pScrollContainer.insertAdjacentHTML('beforeend', `
@@ -420,80 +419,38 @@ let saveReceiptObject = [];
             })
             
             parkedReceiptsObject = [];
-            paymentObject = [];
-            paymentContainer.innerHTML="";
+            clearPaymentContainer();
             comment.value = '';
+            console.log(saveReceiptObject);
+            
         })
     
 
-    // function updateParkedReceiptUI() {
-    //     pScrollContainer.innerHTML = "";
-    //     parkedReceiptsObject.map((e,index)=>{
-    //         pScrollContainer.insertAdjacentHTML('beforeend', `
-    //         <div onclick="parkedReceiptClick(${index})" class="parked-receipt">
-    //             <p class="p-comment">${(comment.value === '' ? 'Kvitto #' : `${comment.value}`)}</p>
-    //             <p class="p-articlename1">${e[0].article}</p>
-    //             <p class="p-articlename2">${(e[1]?.article === undefined) ? '' : `${e[1].article}`}</p>
-    //             <p class="p-articlename3">${(paymentObject.length >= 3 ? `+${paymentObject.length - 2}` : '')}</p>
-    //             <p class="p-price">${totalPrice} kr</p>
-    //         </div>`)
-    //     })
-    // }
-
     function parkedReceiptClick() {
+        updateParkedReceiptUI();
+        updateUI();
+        
         paymentObject = saveReceiptObject;
+        paymentObject = paymentObject.flat()
+        
+        
         articleContainer.style.display = '';
         getReceiptContainer.style.display = 'none';
-        paymentContainer.innerHTML = "";
-        // updateParkedReceiptUI();
-        updateUI();
-    //     paymentContainer.insertAdjacentHTML("afterbegin", `
-    //     <div class="varukorg">
-    //         <button class="park-receipt" id="p-button" onclick="parkReceiptButton()">P</button>
-    //         <p>Varukorg (<span class="articles-added">${paymentObject.length}</span>)</p>
-    //         <button onclick="bigTrashbinButton()" class="trashbin">
-    //             <img src="trashbin.png" alt="">
-    //         </button>
-    //     </div>
-    //     <div class="scroll-container">
-    //     </div>`)
+        
+    }
 
-    // let scrollContainer = document.querySelector('.scroll-container');
 
-    // paymentObject.map((e, index)=>{
-    //     scrollContainer.insertAdjacentHTML('beforeend',`
-    //         <div class="articleinfo">
-    //             <div class="articleandprice">
-    //                 <p class="articlename">${e.article}</p>
-    //                 <p class="price">${e.price}<span>kr</span></p>
-    //             </div>
-    //             <div class="editarticle">
-    //                 <div class="plus-minus-signs">
-    //                     <button>-</button>
-    //                     <button>+</button>
-    //                 </div>
-    //                 <div class="trashbin-pen">
-    //                     <button>
-    //                         <img src="pen-pic.png" alt="">
-    //                     </button>
-    //                     <button onclick="removeArticle(${index})" class="article-trashbin">
-    //                         <img src="trashbin.png" alt="">
-    //                     </button>
-    //                 </div>
-    //             </div>
-    //         </div>`)
-    // })
-    
-    //     paymentContainer.insertAdjacentHTML('beforeend', `
-    //     <div class="payment-methods-container">
-    //         <div class="total-amount-container">
-    //             <p class="total-text">Totalt</p>
-    //             <p class="total-amount">${totalPrice = paymentObject.reduce((accumulator, paymentObject) => accumulator + (paymentObject.price || 0),0)}</p><p>kr</p>
-    //         </div>
-    //         <div class="payment-buttons-container">
-    //             <button class="swish-button">Swish</button>
-    //             <button class="kort-button">Kort</button>
-    //         </div>
-    //     </div>`)
+    function updateParkedReceiptUI() {
+        pScrollContainer.innerHTML = "";
+        paymentObject.map((e,index)=>{
+            pScrollContainer.insertAdjacentHTML('beforeend', `
+            <div onclick="parkedReceiptClick(${index})" class="parked-receipt">
+                <p class="p-comment">${(comment.value === '' ? 'Kvitto #' : `${comment.value}`)}</p>
+                <p class="p-articlename1">${e[0].article}</p>
+                <p class="p-articlename2">${(e[1]?.article === undefined) ? '' : `${e[1].article}`}</p>
+                <p class="p-articlename3">${(paymentObject.length >= 3 ? `+${paymentObject.length - 2}` : '')}</p>
+                <p class="p-price">${totalPrice} kr</p>
+            </div>`)
+        })
     }
         
