@@ -426,12 +426,21 @@ let saveReceiptObject = [];
         })
     
 
-    function parkedReceiptClick() {
+    function parkedReceiptClick(index) {
         updateParkedReceiptUI();
-        updateUI();
         
-        paymentObject = saveReceiptObject;
-        paymentObject = paymentObject.flat()
+        
+        // Assuming saveReceiptObject is an array of arrays
+        const selectedArray = saveReceiptObject[index];
+
+        // Flatten the selected array
+        const flattenedArray = selectedArray.flat();
+
+        // Update paymentObject with the flattened array
+        paymentObject = flattenedArray;
+        console.log(paymentObject)
+        
+        updateUI();
         
         
         articleContainer.style.display = '';
@@ -452,5 +461,6 @@ let saveReceiptObject = [];
                 <p class="p-price">${totalPrice} kr</p>
             </div>`)
         })
+        console.log(paymentObject)
     }
         
