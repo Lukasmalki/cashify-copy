@@ -1,3 +1,6 @@
+
+
+
 let activeButton = null;
 
     function toggleActive(button) {
@@ -21,6 +24,11 @@ let activeButton = null;
     let totalPrice = 0;
     let scrollContainer;
     let paymentObject = [];
+
+    document.querySelector('.dryck').addEventListener('click', () => filterArticles('dryck'));
+    document.querySelector('.mat').addEventListener('click', () => filterArticles('mat'));
+    document.querySelector('.vego').addEventListener('click', () => filterArticles('vego'));
+    document.querySelector('.start').addEventListener('click', () => filterArticles('start'));
 
     articleClick.forEach(articleClick => {
         articleClick.addEventListener('click', () => {
@@ -463,4 +471,19 @@ let saveReceiptObject = [];
         })
         console.log(paymentObject)
     }
+    
+function filterArticles(category) {
+    // Välj endast artikelknappar och inte kategoriknappar
+    const allArticles = document.querySelectorAll('.article-container button[data-article-name]');
+    allArticles.forEach(article => {
+        if (article.getAttribute('data-category') === category || category === 'start') {
+            // Använd 'inline-block' eller 'block', beroende på din layout
+            article.style.display = 'inline-block'; 
+        } else {
+            article.style.display = 'none';
+        }
+    });
+}
+
+
         

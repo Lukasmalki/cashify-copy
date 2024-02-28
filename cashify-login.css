@@ -19,6 +19,29 @@
     height: 50px;
 }
 
+.login-instruction-bubble {
+    position: absolute; /* Eller relativ beroende på din layout */
+    top: 40px; /* Justera dessa värden för att positionera bubblan */
+    left: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    /* Andra stilinställningar efter behov */
+}
+
+.instruction-arrow {
+    position: absolute;
+    top: 10px; /* Justera dessa värden */
+    left: 120px;
+}
+
+.instruction-arrow img {
+    width: 250px; /* Eller annan önskad storlek */
+    height: auto; /* Detta behåller bildens proportioner */
+}
+
 .digits-container {
     display: flex;
     flex-direction: column;
