@@ -7,6 +7,8 @@ export interface IArtikel{
     name:string;
     price:number;
     group:IGroup;
+    bg:string;
+    
 }
 
 export interface IRabbat{
@@ -16,7 +18,6 @@ export interface IRabbat{
 
 export interface IKvitto{
     ArtikelList:Array<IArtikel>;
-    Status:boolean;
     Kopia:boolean;
     Rabbat?:IRabbat;
     Betalning:number; //0 inte betald, 1 kort, 2, swish, 3 Kontant
@@ -51,4 +52,9 @@ export interface IKassa{
     ParkeradeKvitton:IParkeradeKvitton;
     ZRapport:IZRapport[];
     Kunder:IKund;
+}
+
+export interface ILayout{
+    rows:number,
+    cols:number,
 }
